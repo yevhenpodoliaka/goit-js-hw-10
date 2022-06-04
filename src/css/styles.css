@@ -18,3 +18,13 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+.country-list{
+  list-style: none;
+}
+.country-list img{
+  width: 50px;
+}
+.country-list p{
+  display: inline-block;
+  margin-left: 30px;
+}
