@@ -8,16 +8,19 @@ import debounce from 'lodash.debounce';
 const DEBOUNCE_DELAY = 300;
 const refs = getRefs();
 
-
 refs.input.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 function onInput(e) {
+  if (e.target.value === '') {
+    refs.list.innerHTML = '';
+    refs.card.innerHTML = '';
+    return;
+  }
   const inputValue = e.target.value.trim();
   fetchCountries(inputValue).then(onFetchResult).catch(onFetcherror);
 }
 
 function onFetchResult(response) {
-  console.log(response);
   if (response.length > 10) {
     refs.list.innerHTML = '';
     refs.card.innerHTML = '';
@@ -32,7 +35,6 @@ function onFetchResult(response) {
   }
 }
 
-function onFetcherror(error) {
-  console.log(error);
-  Notify.failure('error');
+function onFetcherror() {
+  Notify.failure('Oops, there is no country with that name');
 }

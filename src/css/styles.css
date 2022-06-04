@@ -21,17 +21,22 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
-.country-list{
+.country-list {
   list-style: none;
 }
-.country-list img{
+.country-list img {
   width: 50px;
 }
-.country-list p{
+.country-list p {
   display: inline-block;
   margin-left: 30px;
 }
-
-.country-info img{
+.country-info {
+  width: 320px;
+}
+.country-info img {
   width: 250px;
+}
+.country-info span {
+  font-weight: bold;
 }
