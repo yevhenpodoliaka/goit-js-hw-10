@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -10,6 +12,7 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
+  padding: 16px;
 }
 
 #search-box {
@@ -27,4 +30,8 @@ body {
 .country-list p{
   display: inline-block;
   margin-left: 30px;
+}
+
+.country-info img{
+  width: 250px;
 }
